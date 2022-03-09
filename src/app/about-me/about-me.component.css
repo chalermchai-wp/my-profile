@@ -1,0 +1,17 @@
+:host::ng-deep span.command {
+    font-size: 1rem !important;
+    line-height: 20px !important;
+  }
+:host::ng-deep span.host {
+    color: #8ad733 !important;
+  }
+:host::ng-deep  span.user {
+    color: #729fcf !important;
+  }
+:host::ng-deep span.path {
+  }
+:host::ng-deep .shell--responsive {
+      min-height: 480px !important;
+      min-width: 600px !important;
+}
+  

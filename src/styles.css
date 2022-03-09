@@ -1,1 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
+.ng-icon-education:before {
+  background-image: url('src\assets\education.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  min-width: 128px;
+  min-height: 128px;
+}
+
+.ng-logo-buu:before {
+  background-image: url('src\assets\buu-logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 42px;
+  width: 42px;
+}
+
+.ng-logo-cdg:before {
+  background-image: url('src\assets\cdg-logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 48px;
+  width: 48px;
+}
+
+.ng-logo-cube:before {
+  background-image: url('src\assets\cube-logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 48px;
+  width: 72px;
+}
+
+.ng-icon-cv:before {
+  background-image: url('src\assets\cv_white.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 36px;
+  width: 36px;
+}
+
+.ng-icon-medium:before {
+  background-image: url('src\assets\medium.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 24px;
+  width: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+div.toppic-header {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;    
+  margin: 1.5rem;
+}

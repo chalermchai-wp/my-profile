@@ -1,0 +1,4 @@
+:host::ng-deep .skill{
+    background-color: rgba(233,236,239,.6784313725490196);
+    border-radius: 20px;
+}

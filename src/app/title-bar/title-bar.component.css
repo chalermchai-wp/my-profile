@@ -1,0 +1,46 @@
+:host::ng-deep .topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+:host::ng-deep .topbar-on-scroll {
+  animation: slide-in--down 0.42s cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* background-color: rgba(13,60,97,.8313725490196079)!important; */
+  position: sticky;
+  z-index: 9999;
+}
+
+:host::ng-deep .topbar img {
+  margin: 0 16px;
+}
+
+:host::ng-deep .topbar #twitter-logo {
+  height: 40px;
+  margin: 0 8px;
+}
+
+:host::ng-deep .topbar #youtube-logo {
+  height: 40px;
+  margin: 0 16px;
+}
+
+:host::ng-deep .topbar .header-icon:hover {
+  opacity: 0.8;
+}
+
+:host::ng-deep .spacer {
+  flex: 1;
+}
+
+:host::ng-deep .pi {
+  margin: 0px 12px;
+  font-size: 1.5rem;
+}

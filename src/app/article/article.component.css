@@ -1,0 +1,59 @@
+:host::ng-deep .article-date {
+  line-height: 20px;
+  font-size: 14px;
+  color: rgba(117, 117, 117, 1);
+  margin: 0px 4px;
+}
+
+@media (min-width: 904px) and (max-width: 1079.98px) {
+  .title-article {
+    letter-spacing: 0px;
+    -webkit-line-clamp: 3;
+    max-height: 84px;
+    line-height: 28px;
+    font-size: 22px;
+    font-weight: 700;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgba(41, 41, 41, 1);
+  }
+}
+
+:host::ng-deep .article-author {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  font-family: inherit;
+  border: inherit;
+  font-size: inherit;
+  fill: inherit;
+  color: inherit;
+}
+
+:host::ng-deep .article-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+:host::ng-deep .article-space {
+  height: 24px;
+  border-radius: 50%;
+  box-shadow: rgb(0 0 0 / 5%) 0px 0px 0px 1px inset;
+  position: absolute;
+  width: 24px;
+  top: 0;
+  display: block;
+}
+
+
+:host::ng-deep .article-author {
+    flex-wrap: nowrap;
+    margin-left: 8px;
+    /* width: 100%; */
+    display: flex;
+}

@@ -1,0 +1,85 @@
+:host::ng-deep .education {
+  display: grid;
+  grid-template-columns: 25% 10% auto;
+  grid-template-rows: 33% 33% 33%;
+}
+
+:host::ng-deep div.icon-education {
+  text-align: -webkit-center;
+  background-color: #dbe4f3d9;
+  /* min-width: 64px;
+  min-height: 120px; */
+  /* max-width: 100%;
+  max-height: 100%; */
+  min-height: 220px;
+  min-width: 220px;
+  border-radius: 30%;
+}
+
+:host::ng-deep div.university-name {
+  grid-row: 1;
+  grid-column: 3;
+  background-color: #dbe4f3d9;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  margin: 0.1em;
+  text-align: center;
+}
+
+:host::ng-deep label.univ-name {
+  color: #3f6d8e;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 3em;
+}
+
+:host::ng-deep div.univ-major {
+  grid-row: 2;
+  grid-column: 3;
+  background-color: #dbe4f3d9;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  margin: 0.1em;
+  text-align: center;
+}
+
+:host::ng-deep label.univ-major {
+  color: #3f6d8e;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 3em;
+}
+
+:host::ng-deep div.univ-gpa {
+  grid-row: 3;
+  grid-column: 3;
+  background-color: #dbe4f3d9;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  margin: 0.1em;
+  text-align: center;
+}
+
+:host::ng-deep label.univ-gpa {
+  color: #3f6d8e;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 3em;
+}
+
+:host::ng-deep div.icon-edu {
+    grid-row: 1/-1; grid-column: 1; align-self: center; 
+}
+
+:host::ng-deep .univ-detail {
+    background-color: #dbe4f3d9;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin: 0.1em;
+    text-align: center;
+}
+
+:host::ng-deep .p-fieldset .p-fieldset-legend {
+    font-size: 2.5rem;
+    font-weight: 800;
+}

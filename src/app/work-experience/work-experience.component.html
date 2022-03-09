@@ -1,0 +1,53 @@
+<div class="toppic-header">Work Experience</div>
+
+<p-timeline [value]="experience" [align]="'alternate'">
+    <ng-template pTemplate="marker" let-events>
+        <span class="custom-marker shadow-2" [style.backgroundColor]="events.color">
+            <i [ngClass]="events.icon" ></i>
+        </span>
+    </ng-template>
+    <ng-template pTemplate="content" let-events>
+        <div data-aos="fade-up" data-aos-duration="1500" style="margin: 1rem 0rem;">
+            <p-card styleClass="p-card-shadow" >
+                <div class="card-title org-name" >
+                        <div class="logo">
+                            <i [class]="events.logo"></i> 
+                        </div>
+                        <div class="org-name">
+                            <a [href]="events.url"  target="_blank" rel="noopener follow">
+                                {{events.name}} &nbsp;&nbsp;
+                            </a> 
+                            <p-tag styleClass="mr-2" [value]="events.year" [rounded]="true"></p-tag> 
+                        </div>
+                </div>
+                <ng-container *ngFor="let system of events.systems">
+                    <div class="card-content-systems">
+                        <div class="card-subtitle system-name" >
+                            <ng-container *ngIf="!!system.url; else elseSystemName">
+                                <div class="system-name">
+                                    <a [href]="system.url"  target="_blank" rel="noopener follow">
+                                        {{system.name}} 
+                                    </a>
+                                </div>
+                            </ng-container>
+                            <ng-template #elseSystemName>
+                                <div class="system-name">
+                                    {{system.name}} 
+                                </div>
+                            </ng-template>
+                            <div class="tag-position">
+                                <p-tag styleClass="mr-2" [value]="system.year" icon="pi pi-calendar-times"
+                                [rounded]="true"></p-tag>
+                            </div>
+                        </div>
+                        <div class="card-content detail">
+                            <p-tag styleClass="mr-2" icon="pi pi-info-circle" severity="info" [value]="system.outsource ? system.position + ' - ' + system.outsource : system.position" [rounded]="true"></p-tag>
+                            <br/>
+                            {{system.tools}}
+                        </div>
+                    </div>
+                </ng-container>
+            </p-card>
+        </div>
+    </ng-template>
+</p-timeline>

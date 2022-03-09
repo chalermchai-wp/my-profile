@@ -1,0 +1,13 @@
+<div class="toppic-header">Skill</div>
+<div class="grid skill">
+  <div class="col">
+    <ng-container *ngFor="let item of skills">
+      <img
+        [src]="item.path"
+        [width]="item.width"
+        [height]="item.height"
+        style="margin-left: 2.5em"
+      />
+    </ng-container>
+  </div>
+</div>

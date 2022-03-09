@@ -1,0 +1,46 @@
+<hr>
+<br>
+<div class="grid">
+    <ng-container *ngFor="let item of article.items">
+        <div class="col-12">
+            <p-card [style]="{width: '100%', height: '100%'}" styleClass="p-card-shadow">
+                <div class="article-header">
+                    <img [src]="article.feed.image" [alt]="item.author" [width]="24" [height]="24" style="vertical-align: middle; border-radius: 50%;">
+                    <div class="article-space"></div>
+                    <div class="article-author">
+                        <a [href]="article.feed.link" aria-label="author" rel="noopener follow"  target="_blank">
+                            <p> {{item.author}} </p>
+                        </a>
+                    </div>
+                    <p class="article-date"><span class="ln">.</span>{{item.pubDate}} </p>
+                </div>
+                <a [href]="item.guid" aria-label="Post Preview Title" rel="noopener follow"  target="_blank">
+                    <div class="grid">
+                        <div class="col-10">
+                            <div class="article-title">
+                                <h2 class="title-article">{{item.title}}</h2>
+                            </div>
+                            <div class="article-detail">
+                                {{removeHTML(item.content)}}
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <img [src]="item.thumbnail" [alt]="item.title" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                </a>
+
+                
+                <!-- <ng-template pTemplate="header">
+                    <img alt="Card" src="assets/showcase/images/usercard.png">
+                </ng-template>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+                    quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+                <ng-template pTemplate="footer">
+                    <p-button label="Save" icon="pi pi-check"></p-button>
+                    <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
+                </ng-template> -->
+            </p-card>
+        </div>        
+    </ng-container>
+</div>
