@@ -41,6 +41,36 @@
   width: 72px;
 }
 
+.ng-logo-prior:before {
+  background-image: url('src\assets\logo-prior.jpeg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 48px;
+  width: 72px;
+}
+
+.ng-logo-scb:before {
+  background-image: url('src\assets\logo-scb.jpeg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 48px;
+  width: 72px;
+}
+
+.ng-logo-cardx:before {
+  background-image: url('src\assets\logo-cardx.jpeg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 48px;
+  width: 72px;
+}
+
 .ng-icon-cv:before {
   background-image: url('src\assets\cv_white.png');
   background-repeat: no-repeat;
