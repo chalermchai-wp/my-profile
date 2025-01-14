@@ -60,7 +60,6 @@ export class AboutMeComponent implements OnInit {
     return {
       name: 'Chalerrmchai Wongfiang',
       nickname: 'neung',
-      dateOfBirth: '13 Nov 1995',
       age: this.calculateAge() + ' years old',
       gender: 'male',
       email: 'chalermchai.wp@gmail.com',

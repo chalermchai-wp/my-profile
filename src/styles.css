@@ -72,13 +72,14 @@
 }
 
 .ng-icon-cv:before {
-  background-image: url('src\assets\cv_white.png');
+  /* background-image: url('src\assets\cv_white.png'); */
+  background-image: url('src\assets\curriculum-vitae-svgrepo-com.svg');
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
   display: block;
-  height: 36px;
-  width: 36px;
+  height: 24px;
+  width: 24px;
 }
 
 .ng-icon-medium:before {
@@ -101,4 +102,20 @@ div.toppic-header {
   font-weight: 800;
   text-align: center;    
   margin: 1.5rem;
+}
+
+.my-app-dark {
+  --header-bg: #333;
+  --header-color: #fff;
+  --background-color: #222;
+  --text-color: #eee;
+}
+
+.my-app-dark {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.my-app-dark > div.topbar {
+    background-color: #0f426b !important;
 }

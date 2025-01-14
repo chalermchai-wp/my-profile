@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TitleBarComponent } from './title-bar.component';
+import { ButtonModule } from 'primeng/button';
 
 
 
@@ -9,7 +10,8 @@ import { TitleBarComponent } from './title-bar.component';
     TitleBarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ButtonModule
   ],
   exports: [
     TitleBarComponent
