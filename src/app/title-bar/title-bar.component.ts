@@ -3,6 +3,7 @@ import {
   Component,
   ElementRef,
   HostListener,
+  Input,
   OnInit,
   ViewChild,
 } from '@angular/core';
@@ -16,6 +17,7 @@ import { PrimeIcons } from 'primeng/api';
 export class TitleBarComponent implements OnInit, AfterViewInit {
   @ViewChild('stickyTopbar')
   topbarElement!: ElementRef;
+  @Input() isMobile: Boolean = false;
 
   sticky: boolean = false;
   elementPosition: any;

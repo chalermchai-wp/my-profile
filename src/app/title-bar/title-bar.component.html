@@ -1,36 +1,126 @@
 <!-- topbar -->
-<div class="topbar" [class.topbar-on-scroll]="sticky" #stickyTopbar role="banner">
+<div
+  class="topbar"
+  [class.topbar-on-scroll]="sticky"
+  #stickyTopbar
+  role="banner"
+>
   <img
     src="../../assets/logo-white-dev.png"
-    height="120"
+    [height]="isMobile ? '90' : '120' "
     alt="chalermchai.dev Logo"
   />
 
   <div class="spacer"></div>
-  
-  <div class="menu-title-bar">
-    <p-button icon="{{getIcon()}}" class="mx-1" aria-label="Dark-Mode"  (onClick)="toggleDarkMode()"></p-button>
-  
-    <a href="https://github.com/chalermchai-wp"  class="mx-1" target="_blank" aria-label="github chalermchai" rel="noopener" title="github">
-      <p-button icon="pi pi-github">
-      </p-button>
-    </a>
-  
-    <a href="https://www.linkedin.com/in/chalermchai-wp" class="mx-1" target="_blank" aria-label="linkedin chalermchai" rel="noopener" title="linkedin">
-      <p-button icon="pi pi-linkedin">
-      </p-button>
-    </a>
 
-    <a href="https://medium.com/@chalermchai.wp" class="mx-1" target="_blank" aria-label="medium chalermchai" rel="noopener" title="medium">
-      <p-button icon="pi ng-icon-medium">
-      </p-button>
-    </a>
+  <ng-container *ngIf="isMobile; else elseDesktop">
+    <div class="menu-title-bar">
+      <p-button
+        icon="{{ getIcon() }}"
+        class="mx-1"
+        aria-label="Dark-Mode"
+        (onClick)="toggleDarkMode()"
+      ></p-button>
 
-    <a href="../../assets/resume.pdf" class="mx-1 mr-2" target="_blank" aria-label="resume chalermchai" rel="noopener" title="resume">
-      <p-button icon="pi ng-icon-cv">
-      </p-button>
-    </a>
-    &nbsp;
-  </div>
-  
+      <a
+        href="https://github.com/chalermchai-wp"
+        class="mx-1"
+        target="_blank"
+        aria-label="github chalermchai"
+        rel="noopener"
+        title="github"
+      >
+        <p-button icon="pi pi-github"> </p-button>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/chalermchai-wp"
+        class="mx-1"
+        target="_blank"
+        aria-label="linkedin chalermchai"
+        rel="noopener"
+        title="linkedin"
+      >
+        <p-button icon="pi pi-linkedin"> </p-button>
+      </a>
+
+      <a
+        href="https://medium.com/@chalermchai.wp"
+        class="mx-1"
+        target="_blank"
+        aria-label="medium chalermchai"
+        rel="noopener"
+        title="medium"
+      >
+        <p-button icon="pi ng-icon-medium"> </p-button>
+      </a>
+
+      <a
+        href="../../assets/resume.pdf"
+        class="mx-1 mr-2"
+        target="_blank"
+        aria-label="resume chalermchai"
+        rel="noopener"
+        title="resume"
+      >
+        <p-button icon="pi ng-icon-cv"> </p-button>
+      </a>
+      &nbsp;
+    </div>
+  </ng-container>
+  <ng-template #elseDesktop>
+    <div class="menu-title-bar">
+      <p-button
+        icon="{{ getIcon() }}"
+        class="mx-1"
+        aria-label="Dark-Mode"
+        (onClick)="toggleDarkMode()"
+      ></p-button>
+
+      <a
+        href="https://github.com/chalermchai-wp"
+        class="mx-1"
+        target="_blank"
+        aria-label="github chalermchai"
+        rel="noopener"
+        title="github"
+      >
+        <p-button icon="pi pi-github"> </p-button>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/chalermchai-wp"
+        class="mx-1"
+        target="_blank"
+        aria-label="linkedin chalermchai"
+        rel="noopener"
+        title="linkedin"
+      >
+        <p-button icon="pi pi-linkedin"> </p-button>
+      </a>
+
+      <a
+        href="https://medium.com/@chalermchai.wp"
+        class="mx-1"
+        target="_blank"
+        aria-label="medium chalermchai"
+        rel="noopener"
+        title="medium"
+      >
+        <p-button icon="pi ng-icon-medium"> </p-button>
+      </a>
+
+      <a
+        href="../../assets/resume.pdf"
+        class="mx-1 mr-2"
+        target="_blank"
+        aria-label="resume chalermchai"
+        rel="noopener"
+        title="resume"
+      >
+        <p-button icon="pi ng-icon-cv"> </p-button>
+      </a>
+      &nbsp;
+    </div>
+  </ng-template>
 </div>

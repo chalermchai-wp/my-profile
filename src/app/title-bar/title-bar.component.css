@@ -13,6 +13,7 @@
   background-color: #1976d2;
   color: white;
   font-weight: 600;
+  width: 100vw;
 }
 
 :host::ng-deep .topbar-on-scroll {

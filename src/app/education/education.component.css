@@ -86,7 +86,7 @@
 
 :host::ng-deep .education-detail > .p-fieldset {
   border-radius: 1.5rem;
-  .p-fieldset-legend {
+  legend.p-fieldset-legend {
     border-radius: 1.5rem;
   }
 } 

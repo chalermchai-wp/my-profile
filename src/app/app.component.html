@@ -302,20 +302,31 @@
       visibility: hidden;
     }
   }
+
+  html,
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
 </style>
 
-<app-title-bar></app-title-bar>
+<app-title-bar [isMobile]="isMobile()"></app-title-bar>
 
 <div class="content" role="main">
   <app-about-me class="mb-6" [isMobile]="isMobile()"></app-about-me>
   <br />
   <app-education class="mb-6"></app-education>
   <br />
-  <app-work-experience class="mb-6" [isMobile]="isMobile()"></app-work-experience>
+  <app-work-experience
+    class="mb-6"
+    [isMobile]="isMobile()"
+  ></app-work-experience>
   <br />
   <app-skill class="mb-6"></app-skill>
   <br />
-  <!-- <app-article></app-article> -->
+  <app-article></app-article>
 
   <!-- <button (click)="onClick()" pButton></button> -->
 </div>
