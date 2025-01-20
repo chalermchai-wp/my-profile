@@ -91,3 +91,37 @@
 :host::ng-deep .p-card {
     border-radius: 25px !important
 }
+@media (max-width: 400px) and (max-height: 700px) {
+    div.card-title.org-name {
+        display: unset;
+    }
+
+    div.card-title.org-name > div.org-name{
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    div.card-title.org-name > div.logo{
+        margin-bottom: 0.5rem;
+    }
+
+    div.card-title.org-name > div.exp-age{
+        margin-bottom: 0.5rem;
+    }
+
+    div.card-title.org-name > div.exp-age > p-tag > span.p-tag.p-component{
+        margin-bottom: 0.5rem;
+    }
+
+    :host::ng-deep .card-subtitle.system-name-yrs-long {
+        line-height: 1rem;
+    }
+    :host::ng-deep .card-content.detail .tools {
+        margin-top: 0.5rem;
+    }
+
+    div.card-content-systems > div.detail > p-tag > span.p-tag.p-component{
+        margin-bottom: 0.5rem;
+    }
+    
+}

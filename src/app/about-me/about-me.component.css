@@ -12,6 +12,27 @@
   }
 :host::ng-deep .shell--responsive {
       min-height: 480px !important;
-      min-width: 600px !important;
+      /* min-width: 600px !important; */
 }
   
+@media (max-width: 400px) {
+  :host::ng-deep .shell--responsive {
+    min-width: 100%;
+  }
+
+  :host::ng-deep span.command {
+    font-size: 0.75rem !important;
+    line-height: 20px !important;
+  }
+}
+
+@media (max-height: 700px) {
+  :host::ng-deep .shell--responsive {
+    min-height: 380px!important;;
+  }
+
+  :host::ng-deep span.command {
+    font-size: 0.75rem !important;
+    line-height: 20px !important;
+  }
+}

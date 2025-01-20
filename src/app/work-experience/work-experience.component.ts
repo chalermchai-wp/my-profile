@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PrimeIcons } from 'primeng/api';
 
 @Component({
@@ -9,6 +9,7 @@ import { PrimeIcons } from 'primeng/api';
 export class WorkExperienceComponent implements OnInit {
   experience: any[] = [];
   // aos = require('aos');
+  @Input() isMobile: Boolean = false;
 
   constructor() {}
 

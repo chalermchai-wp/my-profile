@@ -28,7 +28,7 @@
 
 :host::ng-deep label.univ-name {
   color: #3f6d8e;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 3em;
 }
@@ -62,7 +62,7 @@
 
 :host::ng-deep label.univ-gpa {
   color: #3f6d8e;
-  font-size: 36px;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 3em;
 }
@@ -86,4 +86,7 @@
 
 :host::ng-deep .education-detail > .p-fieldset {
   border-radius: 1.5rem;
+  .p-fieldset-legend {
+    border-radius: 1.5rem;
+  }
 } 

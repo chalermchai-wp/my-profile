@@ -307,13 +307,13 @@
 <app-title-bar></app-title-bar>
 
 <div class="content" role="main">
-  <app-about-me></app-about-me>
+  <app-about-me class="mb-6" [isMobile]="isMobile()"></app-about-me>
   <br />
-  <app-education></app-education>
+  <app-education class="mb-6"></app-education>
   <br />
-  <app-work-experience></app-work-experience>
+  <app-work-experience class="mb-6" [isMobile]="isMobile()"></app-work-experience>
   <br />
-  <app-skill></app-skill>
+  <app-skill class="mb-6"></app-skill>
   <br />
   <!-- <app-article></app-article> -->
 

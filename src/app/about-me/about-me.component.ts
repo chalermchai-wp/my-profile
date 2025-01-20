@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import Typed, { TypedOptions } from 'typed.js';
+import { DeviceInfo } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-about-me',
@@ -8,8 +9,11 @@ import Typed, { TypedOptions } from 'typed.js';
 })
 export class AboutMeComponent implements OnInit {
   Shell = require('shell.js');
+  
+  @Input() isMobile: Boolean = false;
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.initCommand();
@@ -44,7 +48,9 @@ export class AboutMeComponent implements OnInit {
   };
 
   linebrakeCommand = () => {
-    return ["<span style='color: #51c2d5;'>#####################################</span>"]
+    const sharpMobile = "###############"
+    const sharpDesktop = "#############################################"
+    return [`<span style='color: #51c2d5;'>${this.isMobile ? sharpMobile : sharpDesktop}</span>`]
   };
 
   profileCommand = () => {
@@ -63,29 +69,37 @@ export class AboutMeComponent implements OnInit {
       age: this.calculateAge() + ' years old',
       gender: 'male',
       email: 'chalermchai.wp@gmail.com',
-      tel: '0624595263',
+      // tel: '0624595263',
       position: 'Fullstack Developer',
     };
   };
 
-  initCommand() {
+  generateCommand() {
     let command: (string[])[] = [];
-    command.push(this.headerCommand());
-    command.push(this.linebrakeCommand());
+    
+    if(!this.isMobile) {
+      command.push(this.headerCommand());    
+    }
+    
+    command.push(this.linebrakeCommand());  
     command.push(this.profileCommand());
     command.push(this.linebrakeCommand());
     command.push(['....']);
-
     console.log(command)
 
+    return command;
+  }
+
+  initCommand() {
+
     var option = {
-      user: 'root',
-      host: 'chalermchai.dev',
+      user: this.isMobile ? "" : 'root',
+      host: this.isMobile ? "" : 'chalermchai.dev',
       path: '/~/',
       theme: 'dark',
       style: 'osx',
       responsive: true,
-      commands: command.flatMap(innerArray => innerArray),
+      commands: this.generateCommand().flatMap(innerArray => innerArray),
       root: false,
       typed: Typed,
       typedSpeed: 5,
